@@ -1,4 +1,4 @@
-# {TRIANGLE TRACKER}
+# {PIG DICE GAME}
 This is my independent project it'scontent is a pig dice game. try playing it, because its fun   {07-04-2019}
  By Nina Simel.
 ## Description
