@@ -14,12 +14,21 @@ body {
 
 }
 h1 {
-    font-size: 2cm;
+    font-size: 1cm;
     text-shadow: 5px 0 black;
     color: black;
 }
 p {
     font-family: 'Montserrat', sans-serif:
 }
+img {
+    width: 400px;
+}
+footer {
+    margin-top: 10%;
+    text-align: center;
+    
+}
+
 
    
