@@ -1,0 +1,25 @@
+.container { 
+    text-align: center;
+    width: 80%;
+    margin: 30px auto;
+
+}
+.Dice {
+    display: inline-block;
+    text-align: center
+  
+}
+body {
+    background-color: plum; 
+
+}
+h1 {
+    font-size: 2cm;
+    text-shadow: 5px 0 black;
+    color: black;
+}
+p {
+    font-family: 'Montserrat', sans-serif:
+}
+
+   
