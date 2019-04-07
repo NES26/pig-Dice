@@ -1,7 +1,29 @@
- var randomNumbaer = Math.floor(math.random() * 6) + 1 // 1 - 6
-var playerOneImages = "img/Dice"+randomNumber;
-var randomNumbaer1 = Math.floor(math.random() * 6) + 1 // 1 - 6
-var playerOneImages1 = "img/Dice"+randomNumber1;
+
+//Global Variables
+var player1, player2;
+//Back-End Logic
+//Constructor function for a player
+function Player(name, turnTotal, diceRoll, overallScore, active) {
+    this.name = name;
+    this.diceRoll = 0;
+    this.turnTotal = 0;
+    this.overallScore = 0;
+    this.active = active;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 document.querySelector('.img1').setAttribute('src'. playerOneImg);
