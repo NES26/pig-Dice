@@ -120,6 +120,7 @@ $(document).ready(function () {
         $(".player2NameOutput").text(player2.name);
         resetFields(); //Clear the form input fields
     });
+    
     //Display dice roll number and turn total when the roll button is clicked
     $('.roll1').click(function (event) { //roll button for player1
         event.preventDefault();
