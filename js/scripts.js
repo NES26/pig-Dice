@@ -96,6 +96,7 @@ $(document).ready(function () {
     $("#rulesHeader").click(function () { //Makes the 'Rules' title clickeable and the rules themselves hideable.
         $("#rulesDefinitions").toggle();
     });
+    
     //Actions when player enters name
     $("#playerNames").submit(function (event) {
         event.preventDefault();
@@ -108,6 +109,7 @@ $(document).ready(function () {
             $(".newGame").hide();
             resetFields();
         });
+
         $('#gamingArea').show();
         //Store the players names in variables.
         var gamer1 = $("#player1Name").val();
@@ -120,7 +122,7 @@ $(document).ready(function () {
         $(".player2NameOutput").text(player2.name);
         resetFields(); //Clear the form input fields
     });
-    
+
     //Display dice roll number and turn total when the roll button is clicked
     $('.roll1').click(function (event) { //roll button for player1
         event.preventDefault();
@@ -131,6 +133,7 @@ $(document).ready(function () {
         $('.diceRoll1').text(player1.diceRoll); //display the rolled dice number
         $('.turnScore1').text(player1.turnTotal); //display the turn score (temporary score)
     });
+
     $('.roll2').click(function (event) { //roll button for player2
         event.preventDefault();
         //Activate Gaming Area
@@ -155,6 +158,7 @@ $(document).ready(function () {
         $('.diceRoll1').text(player1.diceRoll);
         $('.turnScore1').text(player1.turnTotal);
     });
+
     $('.hold2').click(function (event) { //hold button for player2
         event.preventDefault();
         //Deactivate Gaming Area
