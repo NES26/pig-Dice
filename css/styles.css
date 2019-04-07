@@ -1,6 +1,7 @@
 /*Styles for the whole body*/
 .container {
     font-size: 20px;
+    font-family: Montserrat;
     box-sizing: border-box;
     width: 100%;
     padding: 0px;
