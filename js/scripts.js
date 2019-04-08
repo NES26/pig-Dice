@@ -2,7 +2,6 @@
 //Global Variables
 var player1, player2;
 //Back-End Logic
-//Constructor function for a player
 function Player(name, turnTotal, diceRoll, overallScore, active) {
     this.name = name;
     this.diceRoll = 0;
@@ -41,21 +40,6 @@ Player.prototype.roll = function () {
     return this.diceRoll;
 };
 
-Player.prototype.hold = function () {
-    activeUser();
-    this.overallScore += this.turnTotal;
-    if (this.overallScore >= 100) {
-        alert("You win!!!!");
-        resetFields();
-        alert('To play again click New Game.')
-
-    } else {
-        return false;
-    }
-    console.log('the turn total is: ' + this.turnTotal);
-    return this.overallScore;
-};
-
 function resetFields() {
     $("input#player1Name").val("");
     $("input#player2Name").val("");
@@ -82,6 +66,7 @@ $(document).ready(function () {
     });
     
  
+
     $("#playerNames").submit(function (event) {
         event.preventDefault();
         $("#rulesDefinitions").hide();
@@ -94,22 +79,10 @@ $(document).ready(function () {
             resetFields();
         });
 
-        $('#gamingArea').show();
-        var gamer1 = $("#player1Name").val();
-        var gamer2 = $("#player2Name").val();
-        
-        player1 = new Player(gamer1);
-        player2 = new Player(gamer2);
-        
-        $(".player1NameOutput").text(player1.name);
-        $(".player2NameOutput").text(player2.name);
-        resetFields(); 
-    });
-
+       
    
     $('.roll1').click(function (event) { 
         event.preventDefault();
-        //Activate Gaming Area
         player1.active = true;
         player2.active = false;
         player1.roll(); 
@@ -119,7 +92,6 @@ $(document).ready(function () {
 
     $('.roll2').click(function (event) { 
         event.preventDefault();
-        //Activate Gaming Area
         player2.active = true;
         player1.active = false;
         player2.roll(); 
@@ -130,12 +102,10 @@ $(document).ready(function () {
     
     $('.hold1').click(function (event) { 
         event.preventDefault();
-        //Deactivate Gaming Area
         player1.active = false;
         player2.active = true;
         player1.hold(); 
         $('.overallScore1').text(player1.overallScore); 
-        //Clear dice roll and turn score
         player1.diceRoll = 0;
         player1.turnTotal = 0;
         $('.diceRoll1').text(player1.diceRoll);
@@ -144,12 +114,10 @@ $(document).ready(function () {
 
     $('.hold2').click(function (event) { 
         event.preventDefault();
-        //Deactivate Gaming Area
         player2.active = false;
         player1.active = true;
         player2.hold(); 
         $('.overallScore2').text(player2.overallScore); 
-        //Clear turn score and total score
         player2.diceRoll = 0;
         player2.turnTotal = 0;
         $('.diceRoll2').text(player2.diceRoll);
